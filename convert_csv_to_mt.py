@@ -155,6 +155,7 @@ class HST509(Output):
 
         # Transform universal bar list to binary bar data (44 Bytes per bar)
         bars = bytearray()
+        uniBar = 0
         for tick in ticks:
             (uniBar, newUniBar) = self._aggregate(tick)
             if newUniBar:
@@ -196,6 +197,7 @@ class HST574(Output):
 
         # Transform universal bar list to binary bar data (60 Bytes per bar)
         bars = bytearray()
+        uniBar = 0;
         for tick in ticks:
             (uniBar, newUniBar) = self._aggregate(tick)
             if newUniBar:
